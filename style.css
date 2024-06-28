@@ -1,0 +1,281 @@
+*{
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    padding: 0;
+    text-decoration: none;
+    box-sizing: border-box;
+    border: 0;
+    font-family: "Poppins", sans-serif;
+    transition: all .30s ease;
+}
+/* =============================================
+    typography
+     */
+
+
+
+
+/* =============================================
+    layouts
+     */
+.container{
+    width: 90%;
+    margin: 0 auto;
+}
+
+/* ======= header ========= */
+header{
+    padding: 1.2rem 0 .3rem 0;
+    position: sticky;
+    top: 0;
+    z-index: 100;
+    background-color: #fff;
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.1);
+}
+.header{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+/* logo-img */
+.logo{
+    width: 60px;
+    height: 60px;
+    object-fit: cover;
+}
+
+/* navigation */
+nav ul{
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+}
+nav a{
+    font-size: .9rem;
+    margin-left: 2rem;
+    font-weight: 410;
+    color: black;
+}
+
+
+
+
+/* ================== main =================== */
+.main.container{
+    margin: 2rem auto;
+}
+main{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.coffee-img{
+    margin-top: 2rem;
+    width: 200px;
+    display: flex;
+    position: relative;
+}
+.coffee-img::after{
+    position: absolute;
+    left: 10%;
+    width: 80%;
+    height: 100%;
+    background-color: #017143;
+    content: '';
+    z-index: -100;
+    border-radius: 100px 100px 100px 100px;
+}
+.coffee-img img{
+    width: 100%;
+    object-fit: cover;
+    filter: drop-shadow( 0 50px 20px rgba(0, 0, 0, 0.671));     /* giving the shadow to png */
+}
+
+/* coffee info section */
+.coffee-info{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.coffee-info h1{
+    margin:1rem auto;
+    text-align: center;
+    line-height: 3rem;
+    width: 100%;
+    color: #333;
+    font-size: 2.5rem;
+    font-weight: 500;
+}
+.coffee-info h1 span{
+    color: #017143;
+    font-weight: 800;
+}
+.coffee-info p{
+    font-size: .9rem;
+    text-align: center;
+}
+.coffee-info a{
+    margin-top: 1rem;
+    padding: .3rem 1rem;
+    color: #fff;
+    font-weight: 500;
+    border-radius: 50px;
+    display: inline-block;
+    background-color: #017143;
+}
+
+/* ======= aside ======== */
+aside i{
+    display: none;
+    margin-right: .4rem;
+    font-size: 1.3rem;
+    color: #333;
+}
+/* ======= selecter =======*/
+.selecter{
+    display: grid;
+    gap: 20px;
+    grid-template-columns: repeat(3,60px);
+    justify-content: center;
+}
+.selecter img{
+    filter: drop-shadow( 0 20px 10px rgba(0, 0, 0, 0.6));     /* giving the shadow to png */
+    width: 100%;
+}
+.img3{
+    margin-top: -1rem;
+}
+
+
+
+/* ==============shop section =====================*/
+.shop-section h1{
+    text-transform: uppercase;
+    color: #017143;
+    font-size: 2rem;
+}
+.shop-section{
+    margin: 4rem auto;
+    text-align: center;
+}
+.coffee-list{
+    margin-top: 1rem;
+    display: grid;
+    grid-template-columns: repeat(1,1fr);
+    gap: 20px;
+}
+.coffee-list img{
+    width: 80px;
+    filter: drop-shadow( 0 0px 20px rgba(0, 0, 0, 0.41)); 
+}
+.price-info{
+    color: #fff;
+    position: relative;
+}
+.price-info p{
+    font-weight: 700;
+    font-size: 1.1rem;
+}
+.price-info h4{
+    font-size: 1.5rem;
+    font-weight: 500;
+    letter-spacing: .1rem;
+}
+.shop-section h3{
+    text-transform: uppercase;
+    color: #333;
+    font-weight: 600;
+}
+.price-info::after{
+    content: '';
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    width: 100%;
+    height: 70%;
+    border-radius: 20px;
+    z-index: -10;
+    background-color: #017143;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.671);
+}
+.coffee-list .shop-img2{
+    width: 125px;
+}
+.price-info button{
+    padding: .3rem 1.3rem;
+    border-radius: 20px;
+    color: #fff;
+    border: 2px solid #fff;
+    background-color: transparent;
+    margin: 1rem 0;
+    font-weight: 600;
+}
+.selecter-img3{
+    margin-top: -.7rem;
+}
+
+
+
+
+/* =====================================================
+    transitions
+     */
+nav a:hover{
+    color: #017143;
+    border-bottom: 1px solid #017143;
+}
+.selecter img:hover{
+    transform: translatey(-1rem);
+}
+.price-info button:hover{
+    background-color: #fff;
+    color:#017143;
+}
+
+
+
+/* ================================================================================
+    media quries
+     */
+@media(min-width:550px){
+    .selecter{
+        grid-template-columns: repeat(3,100px);
+    }
+}
+@media(min-width:600px){
+    .coffee-list{
+        grid-template-columns: repeat(2,1fr);
+    }
+    .coffee-info h1{
+        font-size: 3rem;
+    }   
+}
+@media(min-width:850px){
+    .coffee-list{
+        grid-template-columns: repeat(3,1fr);
+    }
+    .container{
+        width: 70%;
+    }
+    .coffee-info{
+        width: 60%;
+        align-items: flex-start;
+    }
+    .coffee-info h1{
+        line-height: 4rem;
+        font-size: 4rem;
+        text-align: start;
+        margin: 1rem 0;
+    }
+    .coffee-info p{
+        text-align: start;
+    }
+    main{
+        justify-content: space-between;
+        flex-direction: row;
+    }
+}
